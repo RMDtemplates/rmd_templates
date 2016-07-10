@@ -1,0 +1,13 @@
+name: "rmdtemplates"
+navbar:
+  title: "R Markdown Templates"
+  left:
+    - text: "Home"
+      href: index.html
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    include:
+      after_body: footer.html
+output_dir: "."
