@@ -4,9 +4,11 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Gallery"
+      href: gallery.html
 output:
   html_document:
-    theme: cosmo
+    theme: simplex
     highlight: textmate
     include:
       after_body: footer.html

@@ -1,8 +1,5 @@
----
-title: "R Markdown Templates"
----
-
 ```{r setup, include=FALSE}
+library(readr)
 library(stringr)
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, 
                       fig.align = "center")
@@ -15,3 +12,4 @@ cran_preview_html <- sub('[.][^.]+$', '', list.files("outputs/html")) %>%
   str_split("-")
 
 ```
+
