@@ -1,6 +1,0 @@
-library(jsonlite)
-library(curl)
-library(dplyr)
-library(stringr)
-library(tidyr)
-library(knitr)

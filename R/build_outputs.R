@@ -7,9 +7,11 @@ newpkg_to_install <- unique(cran_meta$pkg_name)[
   !unique(cran_meta$pkg_name) %in% installed.packages()
 ] 
 if(length(newpkg_to_install) != 0){
-  try(install.packages(unique(cran_meta$pkg_name)))
+  try(install.packages(unique(cran_meta$pkg_name), repos = "
+https://cran.rstudio.com/"))
 }
-update.packages(oldPkgs = unique(cran_meta$pkg_name), ask = FALSE)
+update.packages(oldPkgs = unique(cran_meta$pkg_name), ask = FALSE,
+                repos = "https://cran.rstudio.com/")
 
 failed_list <- NULL
 
@@ -48,3 +50,5 @@ for(i in 1:nrow(cran_meta)){
     }
   }
 }
+
+write_csv(failed_list, "metadata/failed.csv")

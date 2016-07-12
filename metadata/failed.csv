@@ -1,0 +1,26 @@
+pkg_name,template_name,path,error_message
+mosaic,mosaic-shiny,inst/rmarkdown/templates/mosaic-shiny,"Error in eval(expr, envir, enclos) : could not find function ""inputPanel""
+"
+represtools,analyze,inst/rmarkdown/templates/analyze,"Error : no value field specified for YAML parameter 'fileStem'
+"
+represtools,cook,inst/rmarkdown/templates/cook,"Error : no value field specified for YAML parameter 'fileStem'
+"
+represtools,gather,inst/rmarkdown/templates/gather,"Error : no value field specified for YAML parameter 'fileStem'
+"
+represtools,present,inst/rmarkdown/templates/present,"Error : YAML output format must evaluate to a function
+"
+rticles,rjournal_article,inst/rmarkdown/templates/rjournal_article,"Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  : 
+  Running 'texi2dvi' on 'RJwrapper.tex' failed.
+LaTeX errors:
+! LaTeX Error: File `skeleton.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+! Emergency stop.
+<read *> 
+         
+l.24   \input{skeleton}
+                       ^^M
+!  ==> Fatal error occurred, no output PDF file produced!
+"
