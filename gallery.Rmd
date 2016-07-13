@@ -1,0 +1,66 @@
+```{r setup, include=FALSE}
+library(tidyr)
+library(dplyr)
+library(readr)
+library(stringr)
+library(knitr)
+library(htmltools)
+opts_chunk$set(echo = FALSE, warning = FALSE, 
+               message = FALSE, fig.align = "center")
+```
+
+```{r read_in_metadata}
+cran_meta <- read_csv("metadata/cran.csv")
+github_meta <- read_csv("metadata/github.csv")
+cran_preview_html <- sub('[.][^.]+$', '', list.files("outputs/html")) %>%
+  as_data_frame() %>%
+  separate(value, c("pkg_name", "template_name"), sep="-", extra = "merge") %>%
+  mutate(type = "html",
+         path = paste0(
+           "outputs/html/", pkg_name, "-", template_name, ".html"
+         ))
+cran_preview_pdf <- sub('[.][^.]+$', '', list.files("outputs/pdf")) %>%
+  as_data_frame() %>%
+  separate(value, c("pkg_name", "template_name"), sep="-", extra = "merge") %>%
+  mutate(type = "pdf",
+         path = paste0(
+           "outputs/pdf/", pkg_name, "-", template_name, ".pdf"
+         ))
+```
+
+# Note: 
+Now we only have a simple table list of these document previews. But, this page will be rebuilt very recently with thumbnails of these output documents. 
+
+<div class="row">
+<div class="col-sm-6">
+
+# HTML Templates
+```{r html_previews}
+cran_preview_html %>%
+  mutate(
+    pkg_name = paste0('<a href="https://cran.r-project.org/package=', pkg_name, 
+                      '">', pkg_name, '</a>'),
+    template_name = paste0('<a href="', path, '">', template_name, '</a>')
+  ) %>%
+  select(-type, -path) %>%
+  kable(col.names = c("Package Name", "Template Name"), escape = FALSE)
+```
+
+</div>
+
+<div class="col-sm-6">
+
+# PDF Templates
+```{r pdf_previews}
+cran_preview_pdf %>%
+  mutate(
+    pkg_name = paste0('<a href="https://cran.r-project.org/package=', pkg_name, 
+                      '">', pkg_name, '</a>'),
+    template_name = paste0('<a href="', path, '">', template_name, '</a>')
+  ) %>%
+  select(-type, -path) %>%
+  kable(col.names = c("Package Name", "Template Name"), escape = FALSE)
+```
+
+</div>
+</div>

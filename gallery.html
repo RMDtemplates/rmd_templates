@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="site_libs/highlight/textmate.css"
+      type="text/css" />
+<script src="site_libs/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="site_libs/style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><strong>rmd</strong><span style='color:#ddd;'>templates</span></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="gallery.html">Gallery</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="note" class="section level1">
+<h1>Note:</h1>
+<p>Now we only have a simple table list of these document previews. But, this page will be rebuilt very recently with thumbnails of these output documents.</p>
+<div class="row">
+<div class="col-sm-6">
+<h1 id="html-templates">HTML Templates</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Package Name</th>
+<th align="left">Template Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=flexdashboard">flexdashboard</a></td>
+<td align="left"><a href="outputs/html/flexdashboard-flex_dashboard.html">flex_dashboard</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=Gmisc">Gmisc</a></td>
+<td align="left"><a href="outputs/html/Gmisc-CONSORT_v2010_docx.html">CONSORT_v2010_docx</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=Gmisc">Gmisc</a></td>
+<td align="left"><a href="outputs/html/Gmisc-STROBE_v4_docx.html">STROBE_v4_docx</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=mosaic">mosaic</a></td>
+<td align="left"><a href="outputs/html/mosaic-mosaic-fancy.html">mosaic-fancy</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=mosaic">mosaic</a></td>
+<td align="left"><a href="outputs/html/mosaic-mosaic-plain.html">mosaic-plain</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=revealjs">revealjs</a></td>
+<td align="left"><a href="outputs/html/revealjs-revealjs_presentation.html">revealjs_presentation</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=rmarkdown">rmarkdown</a></td>
+<td align="left"><a href="outputs/html/rmarkdown-github_document.html">github_document</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=rmarkdown">rmarkdown</a></td>
+<td align="left"><a href="outputs/html/rmarkdown-html_vignette.html">html_vignette</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=rmdformats">rmdformats</a></td>
+<td align="left"><a href="outputs/html/rmdformats-html_clean_projecttemplate.html">html_clean_projecttemplate</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=rmdformats">rmdformats</a></td>
+<td align="left"><a href="outputs/html/rmdformats-html_clean.html">html_clean</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=rmdformats">rmdformats</a></td>
+<td align="left"><a href="outputs/html/rmdformats-html_docco_projecttemplate.html">html_docco_projecttemplate</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=rmdformats">rmdformats</a></td>
+<td align="left"><a href="outputs/html/rmdformats-html_docco.html">html_docco</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=rmdformats">rmdformats</a></td>
+<td align="left"><a href="outputs/html/rmdformats-readthedown_projecttemplate.html">readthedown_projecttemplate</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=rmdformats">rmdformats</a></td>
+<td align="left"><a href="outputs/html/rmdformats-readthedown.html">readthedown</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=rmdshower">rmdshower</a></td>
+<td align="left"><a href="outputs/html/rmdshower-shower.html">shower</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=tufte">tufte</a></td>
+<td align="left"><a href="outputs/html/tufte-tufte_ctex.html">tufte_ctex</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=tufte">tufte</a></td>
+<td align="left"><a href="outputs/html/tufte-tufte_html.html">tufte_html</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-sm-6">
+<h1 id="pdf-templates">PDF Templates</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Package Name</th>
+<th align="left">Template Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=mosaic">mosaic</a></td>
+<td align="left"><a href="outputs/pdf/mosaic-mosaic-plain-pdf.pdf">mosaic-plain-pdf</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=prereg">prereg</a></td>
+<td align="left"><a href="outputs/pdf/prereg-cos_prereg.pdf">cos_prereg</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=resumer">resumer</a></td>
+<td align="left"><a href="outputs/pdf/resumer-resumer.pdf">resumer</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=rticles">rticles</a></td>
+<td align="left"><a href="outputs/pdf/rticles-acm_article.pdf">acm_article</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=rticles">rticles</a></td>
+<td align="left"><a href="outputs/pdf/rticles-acs_article.pdf">acs_article</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=rticles">rticles</a></td>
+<td align="left"><a href="outputs/pdf/rticles-ctex.pdf">ctex</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=rticles">rticles</a></td>
+<td align="left"><a href="outputs/pdf/rticles-elsevier_article.pdf">elsevier_article</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://cran.r-project.org/package=rticles">rticles</a></td>
+<td align="left"><a href="outputs/pdf/rticles-jss_article.pdf">jss_article</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cran.r-project.org/package=s20x">s20x</a></td>
+<td align="left"><a href="outputs/pdf/s20x-STATS20x_Assignment.pdf">STATS20x_Assignment</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="text-right">Created under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons</a> License By <a href="https://github.com/haozhu233">Hao Zhu</a></p></div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
