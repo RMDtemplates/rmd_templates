@@ -19,6 +19,8 @@ cran_preview_html <- sub('[.][^.]+$', '', list.files("outputs/html")) %>%
 
 </div>
 <div style="height: 3px; display: block; background-color: #1a6ecc; margin-top: -10.5px"></div>
+
+<div style="height: 20px; display: block; background-color: #fff;" class="text-center"><strong class="text-danger"><i class="fa fa-warning"></i> This site is still under construction. Sorry for the inconvenience</strong></div>
 <div class="jumbotron">
 <div class="container-fluid main-container">
 <h2 class="text-center">Discover the best <strong>templates</strong> for your <strong class="text-primary">R Markdown</strong> documents</h2>
