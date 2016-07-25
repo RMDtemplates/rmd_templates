@@ -11,6 +11,7 @@ output:
     theme: cosmo
     highlight: textmate
     include:
+      in_header: extra_header.html
       after_body: footer.html
     css: site_libs/style.css
 output_dir: "."
